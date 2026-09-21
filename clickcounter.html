@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+     <head>
+    </head>
+<body>
+    <button id="counterBtn">Click Me</button>
+<p id="counter">Clicks: 0</p>
+<script>
+const counterBtn = document.querySelector("#counterBtn");
+const counter = document.querySelector("#counter");
+let clickCount = 0;
+counterBtn.addEventListener("click", () => {
+clickCount++;
+counter.textContent = `Clicks: ${clickCount}`;
+});
+</script>
+
+</body>
+</html>

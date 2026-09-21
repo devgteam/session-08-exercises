@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <h1 id="title">JavaScript Bootcamp</h1>
+        <button id="changeBtn">Change Title</button>
+        <button id="originalBtn">Original</button>
+    
+    <script>
+        const title = document.querySelector("#title");
+        const changeBtn = document.querySelector("#changeBtn");
+        const originalBtn = document.querySelector("#originalBtn");
+    
+        changeBtn.addEventListener("click", () => {
+        title.textContent = "DOM Is Working!";
+        });
+
+        originalBtn.addEventListener("click", () => {
+        title.textContent = "JavaScript Bootcamp";
+        });
+    </script>
+
+    </head>
+<body>
+
+</body>
+</html>

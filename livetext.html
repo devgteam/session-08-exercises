@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+     <head>
+    </head>
+<body>
+<input id="nameInput" type="text" placeholder="Type your name">
+<p id="preview"></p>
+<script>
+const nameInput = document.querySelector("#nameInput");
+const preview = document.querySelector("#preview");
+nameInput.addEventListener("input", event => {
+preview.textContent = `Hello, ${event.target.value}`;
+});
+</script>
+</body>
+</html>

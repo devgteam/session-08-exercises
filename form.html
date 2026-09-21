@@ -1,0 +1,27 @@
+<form id="taskForm">
+<input id="taskInput" type="text" placeholder="Enter a task">
+<button type="submit">Add Task</button>
+</form>
+<p id="message"></p>
+<script>
+const taskForm = document.querySelector("#taskForm");
+const taskInput = document.querySelector("#taskInput");
+const message = document.querySelector("#message");
+function validateTaskTitle(title) {
+const cleaned = title.trim();
+if (cleaned.length === 0) return "Task title is required.";
+if (cleaned.length < 3) return "Task title is too short.";
+return "";
+}
+taskForm.addEventListener("submit", event => {
+event.preventDefault();
+const error = validateTaskTitle(taskInput.value);
+if (error) {
+message.textContent = error;
+return;
+}
+message.textContent = "Task is valid.";
+taskInput.value = "";
+taskInput.focus();
+});
+</script>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+     <head>
+
+    </head>
+<body>
+    <h1 id="pageTitle">Product Catalog</h1>
+<button class="actionBtn">Save</button>
+<button class="actionBtn">Delete</button>
+<button class="actionBtn">Edit</button>
+<script>
+const pageTitle = document.querySelector("#pageTitle");
+const buttons = document.querySelectorAll(".actionBtn");
+console.log(pageTitle);
+console.log(buttons.length);
+buttons.forEach(button => {
+console.log(button.textContent);
+});
+</script>
+
+</body>
+</html>
